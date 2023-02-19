@@ -26,8 +26,7 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    padding-top: 170px;
+    justify-content: center;
 }
 
 .content_quem_sou h1{

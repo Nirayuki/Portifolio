@@ -92,6 +92,10 @@ main {
 
 @media screen and (max-width: 950px) {
 
+    *{
+        overflow: hidden;
+    }
+
     .typewriter_wrapper {
         font-size: 40px;
     }
