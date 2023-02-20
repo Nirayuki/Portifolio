@@ -13,6 +13,8 @@
 main{
     width: 100%;
     height: 100vh;
+
+    position: relative;
 }
 
 .container{
@@ -21,11 +23,47 @@ main{
 
 .contato{
     height: 100vh;
-    background: #23232e;
+    background: black;
 
     display: flex;
     align-items: center;
     flex-direction: column;
 
     padding-top: 170px;
+}
+
+.card{
+    max-width: 700px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+label{
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+}
+
+input[type=submit]{
+    width: 200px;
+}
+
+.container_form{
+    width: 100%;
+    
 }

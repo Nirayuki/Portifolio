@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="../Styles/header.css">
     <title>Contato</title>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="container_logo">
                 <a class="logo" href="/" style="color: white">Nirayuki</a>
             </div>
-            <div class="container mobile"> 
+            <div class="container mobile">
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line1"></div>
@@ -24,9 +26,6 @@
             <ul class="nav-list">
                 <li>
                     <a href="/pages/apresentacao.html">Apresentação</a>
-                </li>
-                <li>
-                    <a href="/pages/sobre-mim.html">Sobre-mim</a>
                 </li>
                 <li>
                     <a href="/pages/contato.html">Contato</a>
@@ -42,17 +41,29 @@
                 <a href="/pages/apresentacao.html">Apresentação</a>
             </li>
             <li>
-                <a href="/pages/sobre-mim.html">Sobre-mim</a>
-            </li>
-            <li>
                 <a href="/pages/contato.html">Contato</a>
             </li>
         </ul>
         <section class="container contato">
-            <h1>
-                Contato
-            </h1>
+            <div class="container card">
+                <form>
+                    <div class="container_form">
+                        <label for="name">Name</label>
+                        <input id="name" name="name">
+                    </div>
+                    <div class="container_form">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email">
+                    </div>
+                    <div class="container_form">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="4" cols="50"></textarea>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </section>
     </main>
 </body>
+
 </html>

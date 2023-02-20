@@ -10,21 +10,28 @@
     overflow: hidden;
 }
 
+body{
+    overflow: hidden;
+}
+
 h1 {
     font-size: 2.4rem;
 }
 
 main {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
+
+    position: relative;
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
 }
 
 .bem_vindo {
-    width: 100%;
+    width: 100vw;
     position: relative;
     height: 100vh;
 }
@@ -36,11 +43,10 @@ main {
 
     position: absolute;
 
-    background-image: url("../Assets/room.gif");
+    background-image: url("../Assets/bge.png");
     background-repeat: no-repeat;
     background-size: cover;
 
-    filter: blur(15px);
 }
 
 .content {
@@ -59,21 +65,29 @@ main {
 
 .p-size {
     font-size: 36px;
+    font-weight: 600;
+    color: white;
 }
 
 .typewriter_wrapper {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 96px;
+    color: white;
+
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000 -1px -1px #000, 1px -1px #000, -1px 1px #000;
 
     border-right: 10px solid;
 
     width: 100%;
     height: 100%;
+
     white-space: nowrap;
     overflow: hidden;
+
     animation:
-        typing 2s steps(13),
+        typing 2s steps(30),
         cursor .4s step-end infinite alternate;
 }
 
@@ -93,6 +107,14 @@ main {
 @media screen and (max-width: 950px) {
 
     *{
+        overflow: hidden;
+    }
+
+    body{
+        overflow: hidden;
+    }
+
+    main{
         overflow: hidden;
     }
 

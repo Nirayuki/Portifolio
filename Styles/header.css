@@ -1,6 +1,6 @@
 header {
     height: 10vh;
-    width: 100%;
+    width: 100vw;
 
     display: flex;
     justify-content: flex-start;
@@ -13,7 +13,8 @@ header {
 nav {
     display: flex;
 
-    justify-content: space-evenly;
+    padding-left: 100px;
+
     align-items: center;
 
     height: 100%;
@@ -47,12 +48,14 @@ nav a:hover{
     text-transform: uppercase;
     letter-spacing: 4px;
 
-    color: black;
+    padding-right: 100px;
+
+    color: white;
 }
 
 .nav-list {
     display: flex;
-    width: 500px;
+    width: 300px;
     justify-content: space-around;
 }
 
@@ -60,7 +63,6 @@ nav a:hover{
 
     nav{
         justify-content: flex-end;
-        background: #23232e;
     }
 
     .logo{
