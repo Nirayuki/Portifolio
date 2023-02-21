@@ -1,8 +1,9 @@
 class Mobile{
-    constructor(mobile, navListMobile, navLinks){
+    constructor(mobile, navListMobile, navLinks, buttonx){
         this.mobile = document.querySelector(mobile);
         this.navListMobile = document.querySelector(navListMobile);
         this.navLinks = document.querySelectorAll(navLinks);
+        this.buttonx = document.querySelector(buttonx);
         this.activeClass = "active";
         this.handleClick = this.handleClick.bind(this);
     }
@@ -23,6 +24,7 @@ class Mobile{
 
     addClickEvent(){
         this.mobile.addEventListener("click", this.handleClick);
+        this.buttonx.addEventListener("click", this.handleClick);
 
     }
 
@@ -38,7 +40,8 @@ class Mobile{
 const mobile = new Mobile(
     ".mobile",
     ".nav-list-mobile",
-    ".nav-list-mobile li"
+    ".nav-list-mobile li",
+    ".container-x"
 )
 
 mobile.init();

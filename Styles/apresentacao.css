@@ -19,6 +19,10 @@ main{
     position: relative;
 }
 
+span{
+    color: #827ffe;
+}
+
 .container{
     width: 100%;
 }

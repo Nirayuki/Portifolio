@@ -130,3 +130,10 @@ main {
         left: 30px;
     }
 }
+
+
+@media screen and (max-height: 760px){
+    .content{
+        top: 150px;
+    }
+}
