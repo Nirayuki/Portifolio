@@ -118,6 +118,11 @@ main {
         overflow: hidden;
     }
 
+    .bg{
+        background-size: cover;
+        background-position: -530px;
+    }
+
     .typewriter_wrapper {
         font-size: 40px;
     }
