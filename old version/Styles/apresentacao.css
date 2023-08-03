@@ -23,6 +23,18 @@ span{
     color: #827ffe;
 }
 
+.line{
+    height: 2px;
+    background-color: white;
+    opacity: 0.5;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    border-radius: 5px;
+}
+
 .container{
     width: 100%;
 }
@@ -85,6 +97,7 @@ span{
     flex-direction: column;
 
     padding-top: 50px;
+    padding-bottom: 50px;
 
     background: #242e45;
 }
@@ -101,6 +114,50 @@ span{
     justify-content: space-around;
     align-items: center;
 }
+
+
+.projetos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 50px;
+
+    background: #23232e;
+}
+
+.projetos h1{
+    font-size: 60px;
+    padding-bottom: 70px;
+    color: white;
+}
+
+.container_projeto{
+    width: 100%;
+
+}
+
+.projeto_01{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.projeto_01 p{
+    width: 400px;
+    color: white;
+}
+
+.projeto_01 img{    
+    width: 25%;
+    height: 25%;
+}
+
+.projeto_01 div{
+    height: 100%;
+}
+
 
 footer{
     display: flex;
