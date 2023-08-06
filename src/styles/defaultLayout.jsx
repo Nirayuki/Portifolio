@@ -62,6 +62,7 @@ export const HeaderMobile = styled.header`
     top: 20px;
 
     font-size: 2rem;
+    z-index: 999;
 
     .drawer{
         font-size: 1.5rem;

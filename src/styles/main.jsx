@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import wave from '../assets/minimalist-waves-5k-vr-1920x1080.jpg'
 
 
 export const Home = styled.section`
@@ -6,14 +7,33 @@ export const Home = styled.section`
     height: 100vh;
     color: white;
     
-    z-index: -1;
+    z-index: 1;
+
+    background-image: url(${wave});
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #212121;
+        opacity: .6; 
+    }
+
 
 `
 
 export const Content = styled.div`
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
+    position: absolute;
     
 
     display: flex;
@@ -131,7 +151,7 @@ export const Content = styled.div`
         }
     }
 
-    @media screen and (max-width: 360px){
+    @media screen and (max-width: 417px){
 
         gap: 20px;
 
@@ -382,21 +402,26 @@ export const Projetos = styled.section`
         height: 350px;
     }
 
+    .project a{
+        text-decoration: none;
+        background-color: #20E198;
+        width: 150px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 6px;
+    }
+
+    .project a:hover{
+        opacity: 0.7;
+    }
+
     .right{
         display: flex;
         flex-direction: column;
         gap: 30px;
-    }
-
-    .right button{
-        background-color: #20E198;
-        width: 150px;
-        height: 40px;
-    }
-
-    .right button:hover{
-        background-color: #20E198 !important;
-        opacity: 0.7;
     }
 
     .title-right{

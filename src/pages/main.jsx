@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Header, HeaderMobile } from '../styles/defaultLayout'
 import { Home, Content, Apresentacao, Projetos, Contato, Footer } from '../styles/main';
-import { Divider, Button, Tooltip, FloatButton, Drawer } from 'antd';
-import { GithubFilled, LinkedinFilled, InstagramFilled, LaptopOutlined, HomeOutlined, MailOutlined, UserOutlined, MenuOutlined } from '@ant-design/icons';
+import { Divider, Button, Tooltip, FloatButton, Drawer, message } from 'antd';
+import { GithubFilled, LinkedinFilled, InstagramFilled, LaptopOutlined, HomeOutlined, MailOutlined, UserOutlined, MenuOutlined, LoadingOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+
+
 import todonira from '../assets/todonira.png';
 import nexboard from '../assets/nexboardsite.png';
+import emailjs from '@emailjs/browser';
 
 const initialValue = {
-  nome: "",
-  email: "",
+  user_name: "",
+  user_email: "",
   message: ""
 }
 
@@ -17,7 +21,11 @@ function Main() {
   const [activeLink, setActiveLink] = useState('#home');
   const [form, setForm] = useState(initialValue);
   const [open, setOpen] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth); 
+  const [width, setWidth] = useState(window.innerWidth);
+  const [messageApi, contextHolder] = message.useMessage();
+  const key = 'updatable';
+
+  const formRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +75,30 @@ function Main() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    messageApi.open({
+      key,
+      type: 'loading',
+      content: 'Enviado o formulário',
+    });
+    emailjs.sendForm('service_0doegsc', 'template_mem0s0q', formRef.current, 'qD_lEi_k-vBywYN5d')
+      .then((result) => {
+        console.log(result.text);
+        messageApi.open({
+          key,
+          type: 'success',
+          content: 'Formulário enviado!',
+          duration: 2,
+        });
+        setForm(initialValue);
+      }, (error) => {
+        console.log(error.text);
+        messageApi.open({
+          key,
+          type: 'error',
+          content: 'Formulário falhou!',
+          duration: 2,
+        });
+      });
   }
 
   const showDrawer = () => {
@@ -109,6 +141,7 @@ function Main() {
         )
       }
       <>
+      {contextHolder}
         <Home id="home">
           <Content>
             <div className="typewriter">
@@ -218,10 +251,10 @@ function Main() {
                   <p>
                     Todonira é um projeto que criei para afins de estudo com as ferramentas mais requisitadas do mercado de trabalho de tecnologia.
                   </p>
-                  <Button type='primary'>Conhecer</Button>
+                  <Link to="/todonira">Conhecer</Link>
                 </div>
               </div>
-              <div className="project">
+              {/* <div className="project">
                 <img src={nexboard} />
                 <div className="right">
                   <div className="title-right">
@@ -230,9 +263,9 @@ function Main() {
                   <p>
                     Nexboard é uma ferramente para controle de projetos, essa ferramente foi contruída afim de me auxiliar a controlar meus projetos.
                   </p>
-                  <Button type='primary'>Conhecer</Button>
+                  <Link to="/nexboard">Conhecer</Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </Projetos>
@@ -247,18 +280,18 @@ function Main() {
             </div>
             <div className="content-contato">
               <div className="card">
-                <form className='form-contato' onSubmit={handleSubmit}>
+                <form ref={formRef} className='form-contato' onSubmit={handleSubmit}>
                   <div className="row">
                     <label>Nome</label>
-                    <input name="nome" required onChange={handleChange} placeholder='Digite seu nome...' />
+                    <input name="user_name" required onChange={handleChange} placeholder='Digite seu nome...' value={form.user_name} />
                   </div>
                   <div className="row">
                     <label>Email</label>
-                    <input name="email" type="email" required onChange={handleChange} placeholder='Digite seu nome...' />
+                    <input name="user_email" type="email" required onChange={handleChange} placeholder='Digite seu nome...' value={form.user_email}/>
                   </div>
                   <div className="row">
                     <label>Message</label>
-                    <textarea name="message" required onChange={handleChange} placeholder='Digite seu nome...' />
+                    <textarea name="message" required onChange={handleChange} placeholder='Digite seu nome...' value={form.message}/>
                   </div>
                   <input className='button' type='submit' value="Submit" />
                 </form>
