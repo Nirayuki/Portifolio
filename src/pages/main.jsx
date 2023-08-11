@@ -82,7 +82,6 @@ function Main() {
     });
     emailjs.sendForm('service_0doegsc', 'template_mem0s0q', formRef.current, 'qD_lEi_k-vBywYN5d')
       .then((result) => {
-        console.log(result.text);
         messageApi.open({
           key,
           type: 'success',
@@ -91,7 +90,6 @@ function Main() {
         });
         setForm(initialValue);
       }, (error) => {
-        console.log(error.text);
         messageApi.open({
           key,
           type: 'error',
