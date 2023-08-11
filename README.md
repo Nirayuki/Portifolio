@@ -11,7 +11,7 @@
 </p>
 
 <div align="center">
-  <sub>NexBoard. Built with 💙 by
+  <sub>Nirayuki Website. Built with 💙 by
     <a href="https://github.com/Nirayuki">Aron "Nirayuki" Kerkhoven</a> and
     <a href="https://github.com/Nirayuki/Portifolio/graphs/contributors">
       contributors
