@@ -1,7 +1,7 @@
 import React from "react";
 import { DefaultLayoutProjects } from "../components/defaultLayoutProjects";
 import { Container } from "../styles/projects";
-import todonira from '../assets/todonira.png';
+import todonira from '../assets/todo-nira.PNG';
 import { Link } from "react-router-dom";
 
 function TodoNira() {

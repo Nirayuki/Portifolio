@@ -394,12 +394,13 @@ export const Projetos = styled.section`
     .project{
         display: flex;  
         align-items: center;
-        gap: 20px;
+        gap: 50px;
         width: 70%;
     }
 
     .project img{
-        height: 350px;
+        width: 50%;
+        border-radius: 6px;
     }
 
     .project a{
@@ -431,9 +432,7 @@ export const Projetos = styled.section`
     }
 
     @media screen and (max-width: 1152px){
-        .project img{
-            height: 250px;
-        }
+        
         .text-info{
             width: 65%;
         }

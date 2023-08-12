@@ -102,12 +102,12 @@ export const Container = styled.div`
 
     .img-project img{
         width: 850px;
+        border-radius: 6px;
     }
 
     .description{
         width: 100%;
-        max-width: 810px;
-        padding: 20px;
+        max-width: 850px;
         
         display: flex;
         flex-direction: column;
@@ -132,8 +132,7 @@ export const Container = styled.div`
 
     .tools{
         width: 100%;
-        max-width: 810px;
-        padding: 20px;
+        max-width: 850px;
         
         display: flex;
         flex-direction: column;
@@ -161,9 +160,7 @@ export const Container = styled.div`
 
     .live{
         width: 100%;
-        max-width: 810px;
-        padding: 20px;
-
+        max-width: 850px;
         display: flex;
         flex-direction: column;
         gap: 50px;

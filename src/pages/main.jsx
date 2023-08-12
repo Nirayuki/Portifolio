@@ -6,7 +6,7 @@ import { GithubFilled, LinkedinFilled, InstagramFilled, LaptopOutlined, HomeOutl
 import { Link } from 'react-router-dom';
 
 
-import todonira from '../assets/todonira.png';
+import todonira from '../assets/todo-nira.PNG';
 import nexboard from '../assets/nexboardsite.png';
 import emailjs from '@emailjs/browser';
 
