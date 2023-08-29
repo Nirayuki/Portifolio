@@ -643,6 +643,10 @@ export const Footer = styled.footer`
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+
+        img{
+            width: 30px;
+        }
     }
 
     .name span{
@@ -650,6 +654,10 @@ export const Footer = styled.footer`
         font-size: 1.5rem;
         font-weight: bold;
         letter-spacing: 2px;
+
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 
     .name p{

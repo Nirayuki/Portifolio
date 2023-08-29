@@ -10,6 +10,8 @@ import todonira from '../assets/todo-nira.PNG';
 import nexboard from '../assets/nexboardsite.png';
 import emailjs from '@emailjs/browser';
 
+import logo from '../assets/minilogo.png'
+
 const initialValue = {
   user_name: "",
   user_email: "",
@@ -302,7 +304,7 @@ function Main() {
           <div className="content">
             <div className="name-social">
               <div className="name">
-                <span>ARON KERKHOVEN</span>
+                <span><img src={logo}/> ARON KERKHOVEN</span>
                 <p>Um desenvolver frontend focado em desenvolvimento de sites, costruindo o back-end e front-end de aplicações web.</p>
               </div>
               <div className="social">
