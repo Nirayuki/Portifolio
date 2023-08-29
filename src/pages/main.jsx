@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Header, HeaderMobile } from '../styles/defaultLayout'
 import { Home, Content, Apresentacao, Projetos, Contato, Footer } from '../styles/main';
 import { Divider, Button, Tooltip, FloatButton, Drawer, message } from 'antd';
-import { GithubFilled, LinkedinFilled, InstagramFilled, LaptopOutlined, HomeOutlined, MailOutlined, UserOutlined, MenuOutlined, LoadingOutlined } from '@ant-design/icons';
+import { GithubFilled, LinkedinFilled, InstagramFilled, LaptopOutlined, HomeOutlined, MailOutlined, UserOutlined, MenuOutlined, LoadingOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 
@@ -159,6 +159,7 @@ function Main() {
               <a href='https://github.com/Nirayuki' target='_blank'><GithubFilled /></a>
               <a href='https://www.linkedin.com/in/aron-felippe-kerkhoven-328aba243/' target='_blank'><LinkedinFilled /></a>
               <a href='https://www.instagram.com/aron_nirayuki/' target='_blank'><InstagramFilled /></a>
+              <a href="https://api.whatsapp.com/send/?phone=45999275591&text&type=phone_number&app_absent=0" target='_blank'><WhatsAppOutlined/></a>
             </div>
           </Content>
         </Home>
@@ -315,6 +316,7 @@ function Main() {
                   <a href='https://github.com/Nirayuki' target='_blank'><GithubFilled /></a>
                   <a href='https://www.linkedin.com/in/aron-felippe-kerkhoven-328aba243/' target='_blank'><LinkedinFilled /></a>
                   <a href='https://www.instagram.com/aron_nirayuki/' target='_blank'><InstagramFilled /></a>
+                  <a href="https://api.whatsapp.com/send/?phone=45999275591&text&type=phone_number&app_absent=0" target='_blank'><WhatsAppOutlined/></a>
                 </div>
               </div>
             </div>

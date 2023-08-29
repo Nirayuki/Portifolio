@@ -664,11 +664,11 @@ export const Footer = styled.footer`
         color: white;
         font-size: 1rem;
         font-weight: 400;
-        width: 50%;
+        width: 70%;
     }
 
     .social{
-        width: 10%;
+        width: 20%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
