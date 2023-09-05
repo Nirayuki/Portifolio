@@ -11,6 +11,7 @@ import nexboard from '../assets/nexboardsite.png';
 import emailjs from '@emailjs/browser';
 
 import logo from '../assets/minilogo.png'
+import vorago from '../assets/vorago.PNG';
 
 const initialValue = {
   user_name: "",
@@ -255,18 +256,18 @@ function Main() {
                   <Link to="/todonira">Conhecer</Link>
                 </div>
               </div>
-              {/* <div className="project">
-                <img src={nexboard} />
+              <div className="project">
+                <img src={vorago} />
                 <div className="right">
                   <div className="title-right">
-                    Nexboard
+                    Vorago Construtora
                   </div>
                   <p>
-                    Nexboard é uma ferramente para controle de projetos, essa ferramente foi contruída afim de me auxiliar a controlar meus projetos.
+                    O site vorago foi desenvolvido sobre demanda para a empresa Vorago Construtora.
                   </p>
-                  <Link to="/nexboard">Conhecer</Link>
+                  <Link to="/vorago">Conhecer</Link>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </Projetos>
